@@ -1,24 +1,24 @@
-@primary-color: #812d2a; 
+@primary-color: #ee3334; 
 @secondary-color: #089bdf;  
 @third-color: #b6967e;  
 /*
 FUNÇÕES PADRÕES START
 *********************************************************************/
 .border-radius(@style) {
-    -webkit-border-radius: @style;
-    -moz-border-radius: @style;
-    border-radius: @style;
+	-webkit-border-radius: @style;
+	-moz-border-radius: @style;
+	border-radius: @style;
 }
 .box-shadow(@style, @c) when (iscolor(@c)) {
-    -webkit-box-shadow: @style @c;
-    box-shadow:         @style @c;
+	-webkit-box-shadow: @style @c;
+	box-shadow:         @style @c;
 }
 .box-shadow(@style, @alpha: 50%) when (isnumber(@alpha)) {
-    .box-shadow(@style, rgba(0, 0, 0, @alpha));
+	.box-shadow(@style, rgba(0, 0, 0, @alpha));
 }
 
 .clear, .first{
-    clear:both;
+	clear:both;
 }
 /*********************************************************************
 FUNÇÕES PADRÕES END
@@ -28,7 +28,7 @@ NON-RESPONSIVE START
 **********************************************************************************************/
 /* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO START */
 .container {max-width: none !important;width: 960px;}
-.navbar-nav > li > a {padding-top: 15px;padding-bottom:15px;}
+.navbar-nav > li > a {padding-top: 33px;padding-bottom:33px;}
 /* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO END */
 /* Finesse the page header spacing */.page-header {margin-bottom: 30px;}.page-header .lead {margin-bottom: 10px;}/* Non-responsive overrides** Utilitze the following CSS to disable the responsive-ness of the container,* grid system, and navbar.*//* Reset the container *//* Always float the navbar header */.navbar-header {float: left;}/* Undo the collapsing navbar */.navbar-collapse {display: block !important;height: auto !important;padding-bottom: 0;overflow: visible !important;}.navbar-toggle {display: none;}.navbar-collapse {border-top: 0;}.navbar-brand {margin-left: -15px;}/* Always apply the floated nav */.navbar-nav {float: left;margin: 0;}.navbar-nav > li {float: left;}/* Redeclare since we override the float above */.navbar-nav.navbar-right {float: right;}/* Undo custom dropdowns */.navbar .navbar-nav .open .dropdown-menu {position: absolute;float: left;background-color: #fff;border: 1px solid #cccccc;border: 1px solid rgba(0, 0, 0, 0.15);border-width: 0 1px 1px;border-radius: 0 0 4px 4px;-webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);}.navbar-default .navbar-nav .open .dropdown-menu > li > a {color: #333;}.navbar .navbar-nav .open .dropdown-menu > li > a:hover,.navbar .navbar-nav .open .dropdown-menu > li > a:focus,.navbar .navbar-nav .open .dropdown-menu > .active > a,.navbar .navbar-nav .open .dropdown-menu > .active > a:hover,.navbar .navbar-nav .open .dropdown-menu > .active > a:focus {color: #fff !important;background-color: #428bca !important;}.navbar .navbar-nav .open .dropdown-menu > .disabled > a,.navbar .navbar-nav .open .dropdown-menu > .disabled > a:hover,.navbar .navbar-nav .open .dropdown-menu > .disabled > a:focus {color: #999 !important;background-color: transparent !important;}
 /**********************************************************************************************
@@ -43,13 +43,58 @@ a, button  {transition: all 0.25s ease 0s;}
 FONTS START
 **********************************************************************************************/
 .box-chamada {font-family: 'robotoblack', Arial, sans-serif;font-weight: normal;}
+.nav, .header-atendimento {font-family: 'GothamBold', Arial, sans-serif;font-weight: normal;}
+.box-institucional .media-header {font-family: 'GothamBook', Arial, sans-serif;}
+.box .extra, .box .title strong {font-family: 'GothamBlack', Arial, sans-serif;font-weight: normal;}
 /**********************************************************************************************
 FONTS END
 */
 /*
 ESTRUTURA START
 **********************************************************************************************/
-
+.extra-header {
+	position: absolute;left: 0;top: 0;right: 0;z-index: 110;
+	.site-header {
+		.navbar {margin:0;border:0;}
+		.navbar-brand {padding:13px 10px;}
+		.nav {
+			font-size: 17px;text-transform: uppercase;text-align: center;width: 590px;
+			> li {
+				display: inline-block;float: none;
+				+ li {background: url(../imagem/site/bg-menu.png) no-repeat left center;padding-left: 3px;}
+			}
+		}
+		.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {background: none;}
+		.header-atendimento {
+			float: right;font-size: 11px;text-transform: uppercase;line-height: 1;padding:25px 0;
+			&, a {color: #FFF;}
+			* {display: inline-block;vertical-align: middle;}
+			> span, > a {margin-left: 8px;}
+		}
+	}
+}
+.extra-central {
+}
+.extra-atendimento {
+	background: url(../imagem/site/bg-atendimento.jpg) no-repeat center;
+	.site-atendimento {
+		padding:60px 0;
+		.box {
+			height: 320px;
+			.icone {height: 118px;}
+			.extra {height: 66px;}
+		}
+	}
+}
+.extra-footer {
+	background: #d4d4d4 url(../imagem/site/bg-footer.jpg) no-repeat center top;
+	.footer-header {display: block;margin:0;padding:0;font-size: 20px;text-transform: uppercase;margin-bottom: 15px;height: 40px;}
+	.site-footer {padding:54px 0 20px;}
+}
+.extra-direitos {
+	background: #02273b;text-align: center;color: #FFF;font-size: 11px;
+	.site-direitos {padding:26px 0;}
+}
 /**********************************************************************************************
 ESTRUTURA END
 */
@@ -58,13 +103,85 @@ CLASSES START
 **********************************************************************************************/
 [class^='lista-'], [class^='lista-'], [class^='menu-'], [class^='menu-'] ul, .cycle-slideshow {list-style:none;margin-bottom:0;padding-left:0;}
 .btn-gray {background: #EEE;color:#C93F2A;}
+.btn {-webkit-border-radius: 50px;-moz-border-radius: 50px;-ms-border-radius: 50px;-o-border-radius: 50px;border-radius: 50px;padding-left:30px;padding-right: 30px;}
 .btn-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
+.input-lg {-webkit-border-radius: 0;-moz-border-radius: 0;-ms-border-radius: 0;-o-border-radius: 0;border-radius: 0;}
 
 .imagem {display: inline-block;overflow: hidden;max-width: 100%;}
 .imagem-rounded {-webkit-border-radius: 150px;-moz-border-radius: 150px;border-radius: 150px;}
 .inline-block {display:inline-block;}
 [class^='icon-'], [class*='icon-'] {background-repeat:no-repeat;vertical-align:middle;display:inline-block;background-image:url(../imagem/site/icon.png);}
 
+.box-banner {
+	.cycle-banner .cycle-slideshow, .cycle-banner .cycle-slideshow li, .extra {width: 100%;height: 538px;}
+	.cycle-slideshow {
+		overflow: hidden;
+		li {
+			background: no-repeat center top;background-size:cover;
+			.extra {background: url(../imagem/site/bg-banner-bottom.png) repeat-x bottom;}
+			.container {position: relative;height: 538px;}
+		}
+	}
+	.content {position:relative;margin:130px auto 0;width: 728px;height: 312px;background: url(../imagem/site/bg-banner-desc.png) no-repeat left top;text-align: center;z-index: 2;color: #FFF;padding:40px 100px; font-size: 16px;line-height: 1;}
+	.media-header {background: url(../imagem/site/triple-dotted-white.gif) no-repeat center bottom;padding-bottom: 15px;}
+	.torre {position: absolute;right: 0;bottom:0;z-index: 3;}
+	.cycle-nav {
+		background: #d1d1d1;position: relative;
+		.container {position: relative;}
+		&, .cycle-slideshow, .cycle-slideshow li {height: 586px;}
+		.cycle-slideshow {
+			.cycle-slide {cursor: pointer;}
+		}
+		.cycle-prev, .cycle-next {position: absolute;top: 50%;margin-top:-20px;}
+		.cycle-prev {left:-38px;}
+		.cycle-next {right:-38px;}
+	}
+}
+.box {
+	text-align: center;border:1px solid #EEE;padding:28px 0 0 0;background: #FFF;
+	> span {display: block;}
+	.icone {margin-bottom: 10px;}
+	.title {margin-bottom: 10px;font-size: 24px;line-height: 1;}
+	.desc {background: #EEE;padding:6px 0;font-size: 13px;}
+	.extra {
+		* {vertical-align: middle;}
+		.text {display: inline-block;width: 97%;}
+	}
+}
+.box-mini {
+	.extra {padding:6px 0;}
+}
+.box-obras {
+	padding-top:30px;
+	.box-header {
+		text-align: center;font-size: 16px;
+		.media-header {text-transform: uppercase;background: url(../imagem/site/triple-dotted.gif) no-repeat center top;padding-top:20px;}
+	}
+	.empreendimento {
+		text-align: center;margin-bottom: 20px;padding-top: 60px;padding-bottom: 40px;
+		> span {display: block;}
+		.title {
+			height: 130px;margin:10px 0;
+			* {vertical-align: mid}
+			.text {display: inline-block;width: 97%;}
+		}
+		.status {position: relative;}
+		.status-bg {position:absolute;width: 61px;height: 61px;background: #1c3c4d;color: #FFF;-webkit-border-radius: 50px;-moz-border-radius: 50px;-ms-border-radius: 50px;-o-border-radius: 50px;border-radius: 50px;z-index: 1;left: 50%;top: 50%;margin-left: -30px;margin-top: -30px;}
+		.status-input {color: #FFF !important; font-size: 17px !important;position: relative;z-index: 2;height: 52px !important;}
+	}
+	.plus {-webkit-border-radius: 0;-moz-border-radius: 0;-ms-border-radius: 0;-o-border-radius: 0;border-radius: 0;text-align: right;padding-top:15px;padding-bottom: 15px;}
+}
+.box-institucional {
+	background: url(../imagem/site/bg-institucional.jpg) no-repeat center;text-align: center;padding:140px 0;line-height: 1;
+	&, a {color: #FFF;}
+	.media-header {font-size: 55px;text-transform: uppercase;line-height: 1;background: url(../imagem/site/triple-dotted-white.gif) no-repeat center top;padding-top:20px;}
+	.desc {font-size: 40px;text-transform: uppercase;}
+}
+
+.social-footer {
+	text-align: center;
+	a {display: inline-block;padding:0 10px;border:0 solid #a5a5a5;border-left-width: 1px;border-right-width: 1px;}
+}
 .space {width:1%;display:inline-block;height:100%;vertical-align:middle;}
 .relative {position: relative;}
 /**********************************************************************************************
@@ -81,14 +198,14 @@ JQUERY UI END
 
 }
 @media (max-width: 767px) {
- /*    .site-geral:before {content:"TABLET";}*/
+	/*    .site-geral:before {content:"TABLET";}*/
 }
 @media (max-width: 480px) {
- /*#GERAL:before {content:"MOBILE";}*/
+	/*#GERAL:before {content:"MOBILE";}*/
 }
 @media (min-width: 768px) and (max-width: 980px) {
 
 }
 @media (min-width: 981px) and (max-width: 1200px) {
- /*#GERAL:before {content:"ACIMA DE TABLET";}*/
+	/*#GERAL:before {content:"ACIMA DE TABLET";}*/
 }

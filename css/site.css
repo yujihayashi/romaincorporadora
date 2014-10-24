@@ -17,8 +17,8 @@ NON-RESPONSIVE START
   width: 960px;
 }
 .navbar-nav > li > a {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 33px;
+  padding-bottom: 33px;
 }
 /* ALTERAR APENAS ESTAS VARIAVEIS DE ACORDO COM O PROJETO END */
 /* Finesse the page header spacing */
@@ -95,11 +95,11 @@ NON-RESPONSIVE START
 NON-RESPONSIVE END
 */
 ::selection {
-  background-color: #812d2a;
+  background-color: #ee3334;
   color: #FFF;
 }
 ::-moz-selection {
-  background-color: #812d2a;
+  background-color: #ee3334;
   color: #FFF;
 }
 small {
@@ -120,12 +120,116 @@ FONTS START
   font-family: 'robotoblack', Arial, sans-serif;
   font-weight: normal;
 }
+.nav,
+.header-atendimento {
+  font-family: 'GothamBold', Arial, sans-serif;
+  font-weight: normal;
+}
+.box-institucional .media-header {
+  font-family: 'GothamBook', Arial, sans-serif;
+}
+.box .extra,
+.box .title strong {
+  font-family: 'GothamBlack', Arial, sans-serif;
+  font-weight: normal;
+}
 /**********************************************************************************************
 FONTS END
 */
 /*
 ESTRUTURA START
 **********************************************************************************************/
+.extra-header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  z-index: 110;
+}
+.extra-header .site-header .navbar {
+  margin: 0;
+  border: 0;
+}
+.extra-header .site-header .navbar-brand {
+  padding: 13px 10px;
+}
+.extra-header .site-header .nav {
+  font-size: 17px;
+  text-transform: uppercase;
+  text-align: center;
+  width: 590px;
+}
+.extra-header .site-header .nav > li {
+  display: inline-block;
+  float: none;
+}
+.extra-header .site-header .nav > li + li {
+  background: url(../imagem/site/bg-menu.png) no-repeat left center;
+  padding-left: 3px;
+}
+.extra-header .site-header .navbar-default .navbar-nav > .active > a,
+.extra-header .site-header .navbar-default .navbar-nav > .active > a:hover,
+.extra-header .site-header .navbar-default .navbar-nav > .active > a:focus {
+  background: none;
+}
+.extra-header .site-header .header-atendimento {
+  float: right;
+  font-size: 11px;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 25px 0;
+}
+.extra-header .site-header .header-atendimento,
+.extra-header .site-header .header-atendimento a {
+  color: #FFF;
+}
+.extra-header .site-header .header-atendimento * {
+  display: inline-block;
+  vertical-align: middle;
+}
+.extra-header .site-header .header-atendimento > span,
+.extra-header .site-header .header-atendimento > a {
+  margin-left: 8px;
+}
+.extra-atendimento {
+  background: url(../imagem/site/bg-atendimento.jpg) no-repeat center;
+}
+.extra-atendimento .site-atendimento {
+  padding: 60px 0;
+}
+.extra-atendimento .site-atendimento .box {
+  height: 320px;
+}
+.extra-atendimento .site-atendimento .box .icone {
+  height: 118px;
+}
+.extra-atendimento .site-atendimento .box .extra {
+  height: 66px;
+}
+.extra-footer {
+  background: #d4d4d4 url(../imagem/site/bg-footer.jpg) no-repeat center top;
+}
+.extra-footer .footer-header {
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  height: 40px;
+}
+.extra-footer .site-footer {
+  padding: 54px 0 20px;
+}
+.extra-direitos {
+  background: #02273b;
+  text-align: center;
+  color: #FFF;
+  font-size: 11px;
+}
+.extra-direitos .site-direitos {
+  padding: 26px 0;
+}
 /**********************************************************************************************
 ESTRUTURA END
 */
@@ -145,10 +249,26 @@ CLASSES START
   background: #EEE;
   color: #C93F2A;
 }
+.btn {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
 .btn-rounded {
   -webkit-border-radius: 150px;
   -moz-border-radius: 150px;
   border-radius: 150px;
+}
+.input-lg {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
 }
 .imagem {
   display: inline-block;
@@ -169,6 +289,208 @@ CLASSES START
   vertical-align: middle;
   display: inline-block;
   background-image: url(../imagem/site/icon.png);
+}
+.box-banner .cycle-banner .cycle-slideshow,
+.box-banner .cycle-banner .cycle-slideshow li,
+.box-banner .extra {
+  width: 100%;
+  height: 538px;
+}
+.box-banner .cycle-slideshow {
+  overflow: hidden;
+}
+.box-banner .cycle-slideshow li {
+  background: no-repeat center top;
+  background-size: cover;
+}
+.box-banner .cycle-slideshow li .extra {
+  background: url(../imagem/site/bg-banner-bottom.png) repeat-x bottom;
+}
+.box-banner .cycle-slideshow li .container {
+  position: relative;
+  height: 538px;
+}
+.box-banner .content {
+  position: relative;
+  margin: 130px auto 0;
+  width: 728px;
+  height: 312px;
+  background: url(../imagem/site/bg-banner-desc.png) no-repeat left top;
+  text-align: center;
+  z-index: 2;
+  color: #FFF;
+  padding: 40px 100px;
+  font-size: 16px;
+  line-height: 1;
+}
+.box-banner .media-header {
+  background: url(../imagem/site/triple-dotted-white.gif) no-repeat center bottom;
+  padding-bottom: 15px;
+}
+.box-banner .torre {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 3;
+}
+.box-banner .cycle-nav {
+  background: #d1d1d1;
+  position: relative;
+}
+.box-banner .cycle-nav .container {
+  position: relative;
+}
+.box-banner .cycle-nav,
+.box-banner .cycle-nav .cycle-slideshow,
+.box-banner .cycle-nav .cycle-slideshow li {
+  height: 586px;
+}
+.box-banner .cycle-nav .cycle-slideshow .cycle-slide {
+  cursor: pointer;
+}
+.box-banner .cycle-nav .cycle-prev,
+.box-banner .cycle-nav .cycle-next {
+  position: absolute;
+  top: 50%;
+  margin-top: -20px;
+}
+.box-banner .cycle-nav .cycle-prev {
+  left: -38px;
+}
+.box-banner .cycle-nav .cycle-next {
+  right: -38px;
+}
+.box {
+  text-align: center;
+  border: 1px solid #EEE;
+  padding: 28px 0 0 0;
+  background: #FFF;
+}
+.box > span {
+  display: block;
+}
+.box .icone {
+  margin-bottom: 10px;
+}
+.box .title {
+  margin-bottom: 10px;
+  font-size: 24px;
+  line-height: 1;
+}
+.box .desc {
+  background: #EEE;
+  padding: 6px 0;
+  font-size: 13px;
+}
+.box .extra * {
+  vertical-align: middle;
+}
+.box .extra .text {
+  display: inline-block;
+  width: 97%;
+}
+.box-mini .extra {
+  padding: 6px 0;
+}
+.box-obras {
+  padding-top: 30px;
+}
+.box-obras .box-header {
+  text-align: center;
+  font-size: 16px;
+}
+.box-obras .box-header .media-header {
+  text-transform: uppercase;
+  background: url(../imagem/site/triple-dotted.gif) no-repeat center top;
+  padding-top: 20px;
+}
+.box-obras .empreendimento {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+}
+.box-obras .empreendimento > span {
+  display: block;
+}
+.box-obras .empreendimento .title {
+  height: 130px;
+  margin: 10px 0;
+}
+.box-obras .empreendimento .title * {
+  vertical-align: mid;
+}
+.box-obras .empreendimento .title .text {
+  display: inline-block;
+  width: 97%;
+}
+.box-obras .empreendimento .status {
+  position: relative;
+}
+.box-obras .empreendimento .status-bg {
+  position: absolute;
+  width: 61px;
+  height: 61px;
+  background: #1c3c4d;
+  color: #FFF;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  -o-border-radius: 50px;
+  border-radius: 50px;
+  z-index: 1;
+  left: 50%;
+  top: 50%;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.box-obras .empreendimento .status-input {
+  color: #FFF !important;
+  font-size: 17px !important;
+  position: relative;
+  z-index: 2;
+  height: 52px !important;
+}
+.box-obras .plus {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+  text-align: right;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.box-institucional {
+  background: url(../imagem/site/bg-institucional.jpg) no-repeat center;
+  text-align: center;
+  padding: 140px 0;
+  line-height: 1;
+}
+.box-institucional,
+.box-institucional a {
+  color: #FFF;
+}
+.box-institucional .media-header {
+  font-size: 55px;
+  text-transform: uppercase;
+  line-height: 1;
+  background: url(../imagem/site/triple-dotted-white.gif) no-repeat center top;
+  padding-top: 20px;
+}
+.box-institucional .desc {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.social-footer {
+  text-align: center;
+}
+.social-footer a {
+  display: inline-block;
+  padding: 0 10px;
+  border: 0 solid #a5a5a5;
+  border-left-width: 1px;
+  border-right-width: 1px;
 }
 .space {
   width: 1%;

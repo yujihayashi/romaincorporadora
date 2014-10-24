@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
 	<meta charset="UTF-8">
-	<title>Projeto</title>
+	<title>Roma Incorporadora</title>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=960, user-scalable=yes">
 	<link rel="shortcut icon" href="/imagem/favicon.png" type="image/png" />
@@ -26,6 +26,7 @@
 	<script type="text/javascript" src="/library/cycle2/jquery.cycle2.swipe.min.js"></script>
 	<script type="text/javascript" src="/library/cycle2/jquery.cycle2.scrollVert.min.js"></script>
 	<script type="text/javascript" src="/library/cycle2/jquery.cycle2.carousel.min.js"></script>
+	<script type="text/javascript" src="/library/knob/jquery.knob.js"></script>
 	<script type="text/javascript" src="/js/bootstrap_site.js"></script>
 </head>
 <body class="home">
@@ -34,71 +35,339 @@
 		<div class="site-geral">
 			<header class="extra-header">
 				<div class="site-header">
-					<div class="container">
-						<nav class="navbar navbar-default" role="navigation">
-							<!-- Brand and toggle get grouped for better mobile display -->
+					<nav class="navbar navbar-default" role="navigation">
+						<div class="container">
 							<div class="navbar-header">
-								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-									<span class="sr-only">Toggle navigation</span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-									<span class="icon-bar"></span>
-								</button>
-								<a class="navbar-brand" href="/" title="Voltar para a página inicial">Title</a>
+								<a class="navbar-brand" href="/" title="Voltar para a página inicial"><img src="/imagem/site/roma-incorporadora.png" alt="Logotipo Roma Incorporadora"></a>
 							</div>
-						
-							<!-- Collect the nav links, forms, and other content for toggling -->
 							<div class="collapse navbar-collapse navbar-ex1-collapse">
 								<ul class="nav navbar-nav">
-									<li class="active"><a href="#">Link</a></li>
-									<li><a href="#">Link</a></li>
+									<li class="active"><a href="/"><span class="icon-home"></span><span class="sr-only">Página inicial</span></a></li>
+									<li><a href="#">Roma</a></li>
+									<li><a href="#">Empreendimentos</a></li>
+									<li><a href="#">Obras</a></li>
 								</ul>
-								<form class="navbar-form navbar-left" role="search">
-									<div class="form-group">
-										<input type="text" class="form-control" placeholder="Search">
-									</div>
-									<button type="submit" class="btn btn-default">Submit</button>
-								</form>
-								<ul class="nav navbar-nav navbar-right">
-									<li><a href="#">Link</a></li>
-									<li class="dropdown">
-										<a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-										<ul class="dropdown-menu">
-											<li><a href="#">Action</a></li>
-											<li><a href="#">Another action</a></li>
-											<li><a href="#">Something else here</a></li>
-											<li><a href="#">Separated link</a></li>
-										</ul>
-									</li>
-								</ul>
+								<div class="header-atendimento">
+									<span class="inline-block">Central de <br>Atendimento:</span>
+									<a href="#" title="Entre em contato conosco"><span class="icon-contato"></span><span class="sr-only">Contato</span></a>
+									<a href="#" title="Fale com o corretor online"><span class="icon-corretor-online"></span><span class="sr-only">Corretor Online</span></a>
+								</div> <!-- .header-atendimento -->
 							</div><!-- /.navbar-collapse -->
-						</nav>
-					</div> <!-- .container -->
+						</div> <!-- .container -->
+					</nav>
 				</div> <!-- .site-header -->
 			</header> <!-- .extra-header -->
 			<div class="extra-central">
 				<div class="site-central">
+					<div class="box-banner">
+						<div class="cycle-banner">
+							<ul class="cycle-slideshow" data-cycle-slides="> li" data-cycle-timeout="0"  data-cycle-fx="scrollHorz" data-cycle-speed="1800" data-cycle-easing="easeInOutExpo" data-cycle-log="false">
+								<li style="background-image:url(/imagem/site/empreendimento/maiorana-one/banner.jpg);">
+									<div class="extra">
+										<div class="container">
+											<div class="content">
+												<h2 class="media-header"><img src="/imagem/site/empreendimento/maiorana-one/logo-destaque.png" alt=""></h2>
+												<p class="desc">1 Com vista extraordinária para a Baia do Guajará compõe o cenário perfeito para quem busca o que há de melhor em termos de conforto, requinte e beleza.</p>
+											</div> <!-- .content -->
+											<p class="text-center">
+												<a href="#" title="Acesse o hotsite!" class="btn btn-primary">Saiba mais</a>
+											</p>
+											<span class="torre"><img src="/imagem/site/empreendimento/maiorana-one/torre.png" alt="torre"></span>
+										</div> <!-- .container -->
+									</div> <!-- .extra -->
+								</li>
+								<li style="background-image:url(/imagem/site/empreendimento/maiorana-one/banner.jpg);">
+									<div class="extra">
+										<div class="container">
+											<div class="content">
+												<h2 class="media-header"><img src="/imagem/site/empreendimento/maiorana-one/logo-destaque.png" alt=""></h2>
+												<p class="desc">2 Com vista extraordinária para a Baia do Guajará compõe o cenário perfeito para quem busca o que há de melhor em termos de conforto, requinte e beleza.</p>
+											</div> <!-- .content -->
+											<p class="text-center">
+												<a href="#" title="Acesse o hotsite!" class="btn btn-primary">Saiba mais</a>
+											</p>
+											<span class="torre"><img src="/imagem/site/empreendimento/maiorana-one/torre.png" alt="torre"></span>
+										</div> <!-- .container -->
+									</div> <!-- .extra -->
+								</li>
+								<li style="background-image:url(/imagem/site/empreendimento/maiorana-one/banner.jpg);">
+									<div class="extra">
+										<div class="container">
+											<div class="content">
+												<h2 class="media-header"><img src="/imagem/site/empreendimento/maiorana-one/logo-destaque.png" alt=""></h2>
+												<p class="desc">3 Com vista extraordinária para a Baia do Guajará compõe o cenário perfeito para quem busca o que há de melhor em termos de conforto, requinte e beleza.</p>
+											</div> <!-- .content -->
+											<p class="text-center">
+												<a href="#" title="Acesse o hotsite!" class="btn btn-primary">Saiba mais</a>
+											</p>
+											<span class="torre"><img src="/imagem/site/empreendimento/maiorana-one/torre.png" alt="torre"></span>
+										</div> <!-- .container -->
+									</div> <!-- .extra -->
+								</li>
+							</ul>
+						</div> <!-- .cycle-banner -->
+						<div class="cycle-nav">
+							<div class="container">
+								<div id="cycle-2" class="cycle-slideshow" data-cycle-speed="1800" data-cycle-easing="easeInOutExpo" data-cycle-slides="> div" data-cycle-timeout="0" data-cycle-prev=".box-banner .cycle-nav .cycle-prev" data-cycle-next=".box-banner .cycle-nav .cycle-next" data-cycle-fx="carousel" data-cycle-carousel-visible="3" data-cycle-carousel-fluid="true" data-allow-wrap="false" data-cycle-log="false">
+									<div><img src="http://malsup.github.io/images/beach1.jpg" width=100 height=100></div>
+									<div><img src="http://malsup.github.io/images/beach2.jpg" width=100 height=100></div>
+									<div><img src="http://malsup.github.io/images/beach3.jpg" width=100 height=100></div>
+								</div> <!-- .cycle-slideshow -->
+								<a href="javascript:void(0);" class="cycle-prev"><span class="sr-only">Banner anterior</span><span class="icon-arrow-left-white"></span></a>
+								<a href="javascript:void(0);" class="cycle-next"><span class="sr-only">Próximo banner</span><span class="icon-arrow-right-white"></span></a>
+							</div> <!-- .container -->
+						</div> <!-- .cycle-nav -->
+					</div> <!-- .box-banner -->
+
+
+					<script>
+					jQuery(document).ready(function($){
+
+						var slideshows = $('.cycle-slideshow').on('cycle-next cycle-prev', function(e, opts) {
+							    // advance the other slideshow
+							    slideshows.not(this).cycle('goto', opts.currSlide);
+							});
+
+						$('#cycle-2 .cycle-slide').click(function(){
+							var index = $('#cycle-2').data('cycle.API').getSlideIndex(this);
+							slideshows.cycle('goto', index);
+						});
+
+					});
+					</script>
+
+				</div> <!-- #main -->
+				<div class="box-obras">
 					<div class="container">
-						
-					</div> <!-- .container -->
+						<div class="box-header">
+							<h2 class="media-header h3">Obras</h2>
+							<p>Receba as informações da obra e acompanhe o desenvolvimento<br>
+								de cada Empreendimento.</p>
+							</div> <!-- .box-header -->
+							<div class="box-content">
+								<div class="row">
+									<div class="col-xs-4 empreendimento">
+										<div class="status">
+											<span class="status-bg"></span>
+											<input class="status-input status-radisson" data-width="140" data-height="140" data-displayInput="true" data-fgColor="#1c3c4d" data-thickness=".06"  data-readOnly="true" value="100">
+											<script>
+											$(function() {
+												$(".status-radisson").knob({
+													change: function(value) {
+			                                                //console.log("change : " + value);
+			                                            },
+			                                            release: function(value) {
+			                                                //console.log(this.$.attr('value'));
+			                                                console.log("release : " + value);
+			                                            },
+			                                            cancel: function() {
+			                                            	console.log("cancel : ", this);
+			                                            },
+			                                            'draw': function() {
+			                                            	$(this.i).val(this.cv + '%')
+			                                            }
+			                                        });
+											});
+											</script>
+										</div> <!-- .status -->
+										<span class="title">
+											<span class="text"><img src="/imagem/site/empreendimento/radisson/logo-sm.jpg" alt=""></span><span class="space"></span>
+										</span>
+										<span class="buttons">
+											<a href="#"><span class="icon-camera"></span></a>
+											<a href="#" class="btn btn-primary">Agende uma visita</a>
+										</span>
+									</div> <!-- .col-xs-4 -->
+									<div class="col-xs-4 empreendimento">
+										<div class="status">
+											<span class="status-bg"></span>
+											<input class="status-input status-maiorana" data-width="140" data-height="140" data-displayInput="true" data-fgColor="#1c3c4d" data-thickness=".06"  data-readOnly="true" value="50">
+											<script>
+											$(function() {
+												$(".status-maiorana").knob({
+													change: function(value) {
+			                                                //console.log("change : " + value);
+			                                            },
+			                                            release: function(value) {
+			                                                //console.log(this.$.attr('value'));
+			                                                console.log("release : " + value);
+			                                            },
+			                                            cancel: function() {
+			                                            	console.log("cancel : ", this);
+			                                            },
+			                                            'draw': function() {
+			                                            	$(this.i).val(this.cv + '%')
+			                                            }
+			                                        });
+											});
+											</script>
+										</div> <!-- .status -->
+										<span class="title">
+											<span class="text"><img src="/imagem/site/empreendimento/maiorana-one/logo-sm.jpg" alt=""></span><span class="space"></span>
+										</span>
+										<span class="buttons">
+											<a href="#"><span class="icon-camera"></span></a>
+											<a href="#" class="btn btn-primary">Agende uma visita</a>
+										</span>
+									</div> <!-- .col-xs-4 -->
+									<div class="col-xs-4 empreendimento">
+										<div class="status">
+											<span class="status-bg"></span>
+											<input class="status-input status-angelina" data-width="140" data-height="140" data-displayInput="true" data-fgColor="#1c3c4d" data-thickness=".06"  data-readOnly="true" value="75">
+											<script>
+											$(function() {
+												$(".status-angelina").knob({
+													change: function(value) {
+			                                                //console.log("change : " + value);
+			                                            },
+			                                            release: function(value) {
+			                                                //console.log(this.$.attr('value'));
+			                                                console.log("release : " + value);
+			                                            },
+			                                            cancel: function() {
+			                                            	console.log("cancel : ", this);
+			                                            },
+			                                            'draw': function() {
+			                                            	$(this.i).val(this.cv + '%')
+			                                            }
+			                                        });
+											});
+											</script>
+										</div> <!-- .status -->
+										<span class="title">
+											<span class="text"><img src="/imagem/site/empreendimento/angelina/logo-sm.jpg" alt=""></span><span class="space"></span>
+										</span>
+										<span class="buttons">
+											<a href="#"><span class="icon-camera"></span></a>
+											<a href="#" class="btn btn-primary">Agende uma visita</a>
+										</span>
+									</div> <!-- .col-xs-4 -->
+								</div> <!-- .row -->
+							</div> <!-- .box-content -->
+							<a href="#" class="btn btn-info btn-block plus">Veja todos >></a>
+						</div> <!-- .container -->
+					</div> <!-- .box-obras -->
+					<div class="box-institucional">
+						<div class="container">
+							<h2 class="media-header">ROMA INCORPORADORA</h2>
+							<p class="desc">O charme de viver bem!</p>
+							<br>
+							<a href="#" title="Clique e saiba mais" class="btn btn-primary btn-lg">Saiba mais</a>
+						</div> <!-- .container -->
+					</div> <!-- .box-institucional -->
 				</div> <!-- .site-central -->
 			</div> <!-- .extra-central -->
 			<footer>
-				<div class="extra-footer">
-					<div class="site-footer">
+				<div class="extra-atendimento">
+					<div class="site-atendimento">
 						<div class="container">
-							<a href="http://www.libradesign.com.br" target="_blank" title="Libra Design"><img src="/imagem/site/libra.png" alt="Logotipo Libra Design +Tech"></a>
-						</div> <!-- .container -->
-					</div> <!-- .site-footer -->
-				</div> <!-- .extra-footer -->
-			</footer>
-		</div> <!-- .site-geral -->
-	</div> <!-- .extra-geral -->
-	<script src="http://localhost:35729/livereload.js"></script>
-	<script>
-	jQuery(document).ready(function(){
+							<div class="row">
+								<div class="col-xs-4">
+									<div class="box">
+										<span class="icone"><span class="icon-contato-lg"></span></span>
+										<span class="title">PRONTO PARA <strong>ATENDÊ-LOS</strong></span>
+										<span class="desc">Ligue agora!</span>
+										<span class="extra">
+											<span class="text">(91) 3226-9032 / (91) 3222-9153 /
+												(91) 3254-9396</span>
+												<span class="space"></span>
+											</span>
+										</div> <!-- .box -->
+									</div> <!-- .col-xs-4 -->
+									<div class="col-xs-4">
+										<div class="box">
+											<span class="icone"><span class="icon-boleto-lg"></span></span>
+											<span class="title">2ª Via de <br><strong>BOLETO</strong></span>
+											<span class="desc">Gere seu boleto de pagamento</span>
+											<span class="extra">
+												<span class="text">
+													<a href="#">SAIBA MAIS</a>
+												</span>
+												<span class="space"></span>
+											</span>
+										</div> <!-- .box -->
+									</div> <!-- .col-xs-4 -->
+									<div class="col-xs-4">
+										<div class="box">
+											<span class="icone"><span class="icon-corretor-online-lg"></span></span>
+											<span class="title">Corretor <br><strong>ONLINE</strong></span>
+											<span class="desc">Conecte agora!</span>
+											<span class="extra">
+												<span class="text">
+													<a href="#">CLIQUE E FALE CONOSCO!</a>
+												</span>
+												<span class="space"></span>
+											</span>
+										</div> <!-- .box -->
+									</div> <!-- .col-xs-4 -->
+								</div> <!-- .row -->
+							</div> <!-- .container -->
+						</div> <!-- .site-atendimento -->
+					</div> <!-- .extra-atendimento -->
+					<div class="extra-footer">
+						<div class="site-footer">
+							<div class="container">
+								<div class="row">
+									<div class="col-xs-4">
+										<h2 class="footer-header">Onde estamos</h2>
+										<p>
+											Tv. Alferes Costa, nº 2936 (Duque de Caxias e Rômulo Maiorana).
+										</p>
+										<p>
+											Marco - Belém/PA - Brasil<br>
+											CEP: 66.087-660
+										</p>
+										<p>
+											Fone: (91) 3226-9032 | 3222-9153 | 3254-9396<br>
 
-	});
-	</script>
-</body>
-</html>
+											Email: gvendas@romaincorporadora.com.br
+										</p>
+									</div> <!-- .col-xs-4 -->
+									<div class="col-xs-2 col-xs-offset-1">
+										<div class="box box-mini">
+											<span class="icone"><a href="#"><span class="icon-marker-lg"></span></a></span>
+											<span class="desc">Encontre-nos no</span>
+											<span class="extra"><a href="#">MAPA</a></span>
+										</div>
+									</div> <!-- .col-xs-2 -->
+									<div class="col-xs-4 col-xs-offset-1">
+										<h2 class="footer-header">RECEBA NOSSAS NOVIDADES POR E-MAIL!</h2>
+										<form action="">
+											<div class="form-group">
+												<label for="fNewsletterNome" class="sr-only">Nome:</label>
+												<input type="text" class="form-control input-lg" id="fNewsletterNome" name="fNewsletterNome" placeholder="Nome:">
+											</div> <!-- .form-group -->
+											<div class="form-group">
+												<label for="fNewsletterEmail" class="sr-only">E-mail:</label>
+												<input type="email" class="form-control input-lg" id="fNewsletterEmail" name="fNewsletterEmail" placeholder="E-mail:">
+											</div> <!-- .form-group -->
+											<button class="btn btn-primary">Enviar</button>
+										</form>
+									</div> <!-- .col-xs-4 -->
+								</div> <!-- .row -->
+								<hr>
+								<div class="social-footer">
+									<a href="#" title="" target="_blank"><span class="icon-facebook"></span></a>
+								</div>
+							</div> <!-- .container -->
+						</div> <!-- .site-footer -->
+					</div> <!-- .extra-footer -->
+					<div class="extra-direitos">
+						<div class="site-direitos">
+							<div class="container">
+								© Copyright 2014 Roma Incorporadora. Política de Privacidade - Desenvolvido por:
+								<a href="http://www.libradesign.com.br" target="_blank" title="Libra Design"><img src="/imagem/site/libra.png" alt="Logotipo Libra Design +Tech"></a>
+							</div> <!-- .container -->
+						</div> <!-- .site-direitos -->
+					</div> <!-- .extra-direitos -->
+				</footer>
+			</div> <!-- .site-geral -->
+		</div> <!-- .extra-geral -->
+		<script src="http://localhost:35729/livereload.js"></script>
+		<script>
+		jQuery(document).ready(function(){
+
+		});
+		</script>
+	</body>
+	</html>
