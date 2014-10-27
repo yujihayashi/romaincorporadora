@@ -45,13 +45,14 @@ FONTS START
 .box-chamada {font-family: 'robotoblack', Arial, sans-serif;font-weight: normal;}
 .nav, .header-atendimento {font-family: 'GothamBold', Arial, sans-serif;font-weight: normal;}
 .box-institucional .media-header {font-family: 'GothamBook', Arial, sans-serif;}
-.box .extra, .box .title strong {font-family: 'GothamBlack', Arial, sans-serif;font-weight: normal;}
+.cycle-nav .status, .cycle-nav .title, .cycle-nav .area, .box .extra, .box .title strong {font-family: 'GothamBlack', Arial, sans-serif;font-weight: normal;}
 /**********************************************************************************************
 FONTS END
 */
 /*
 ESTRUTURA START
 **********************************************************************************************/
+.site-geral, .site-header, .navbar {min-width: 960px;}
 .extra-header {
 	position: absolute;left: 0;top: 0;right: 0;z-index: 110;
 	.site-header {
@@ -113,26 +114,57 @@ CLASSES START
 [class^='icon-'], [class*='icon-'] {background-repeat:no-repeat;vertical-align:middle;display:inline-block;background-image:url(../imagem/site/icon.png);}
 
 .box-banner {
-	.cycle-banner .cycle-slideshow, .cycle-banner .cycle-slideshow li, .extra {width: 100%;height: 538px;}
+	.cycle-banner .cycle-slideshow, .cycle-banner .cycle-slideshow li, .cycle-banner .extra {width: 100%;height: 538px;}
 	.cycle-slideshow {
-		overflow: hidden;
-		li {
-			background: no-repeat center top;background-size:cover;
-			.extra {background: url(../imagem/site/bg-banner-bottom.png) repeat-x bottom;}
-			.container {position: relative;height: 538px;}
+		.cycle-slide {
+			* {white-space: normal !important;}
 		}
 	}
-	.content {position:relative;margin:130px auto 0;width: 728px;height: 312px;background: url(../imagem/site/bg-banner-desc.png) no-repeat left top;text-align: center;z-index: 2;color: #FFF;padding:40px 100px; font-size: 16px;line-height: 1;}
-	.media-header {background: url(../imagem/site/triple-dotted-white.gif) no-repeat center bottom;padding-bottom: 15px;}
-	.torre {position: absolute;right: 0;bottom:0;z-index: 3;}
+	.cycle-banner {
+
+		.cycle-slideshow {
+			overflow: hidden;
+			li {
+				background: no-repeat center top;background-size:cover;
+				.extra {background: url(../imagem/site/bg-banner-bottom.png) repeat-x bottom;}
+				.container {position: relative;height: 538px;}
+			}
+		}
+		.content {position:relative;margin:130px auto 0;width: 728px;height: 312px;background: url(../imagem/site/bg-banner-desc.png) no-repeat left top;text-align: center;z-index: 2;color: #FFF;padding:40px 100px; font-size: 16px;line-height: 1;}
+		.media-header {background: url(../imagem/site/triple-dotted-white.gif) no-repeat center bottom;padding-bottom: 15px;}
+		.torre {position: absolute;right: 0;bottom:0;z-index: 3;}
+	}
 	.cycle-nav {
-		background: #d1d1d1;position: relative;
+		background: #d1d1d1 url(../imagem/site/bg-banner-nav.jpg) no-repeat center;position: relative;
 		.container {position: relative;}
 		&, .cycle-slideshow, .cycle-slideshow li {height: 586px;}
 		.cycle-slideshow {
 			.cycle-slide {cursor: pointer;}
+			.content {
+				text-align: center;position: relative;height: 586px;background: #000;line-height: 1;
+				&, a {color: #FFF;}
+				> span, > a, .text .extra > span, .text .extra > a {display: block;}
+				.imagem {position: relative;z-index: 1;-webkit-opacity: .4;-moz-opacity: .4;-ms-opacity: .4;-o-opacity: .4;opacity: .4;filter:alpha(opacity=40);}
+				.status, .text {position: absolute;z-index: 2;}
+				.status {left: 0;top: 0;right: 0;background: url(../imagem/site/bg-banner-nav-status.png) no-repeat center bottom;text-transform: uppercase;font-size: 14px;padding:10px 0 13px;}
+				.text {
+					left: 0;right: 0;bottom: 0;background: url(../imagem/site/bg-banner-nav-text.png) no-repeat center bottom;min-height: 214px;
+					.extra {padding:10px 30px 30px;position: absolute;left: 0;right: 0;bottom: 0;display: block;}
+				}
+				.title {text-transform: uppercase;font-size: 28px;margin-bottom: 4px;}
+				.bairro {margin-bottom: 4px;}
+				.area {font-size: 20px;margin-bottom: 6px;}
+			}
+			.cycle-slide-active {
+				.content {
+					.imagem {-webkit-opacity: 1;-moz-opacity: 1;-ms-opacity: 1;-o-opacity: 1;opacity: 1;filter:alpha(opacity=100);}
+				}
+			}
 		}
-		.cycle-prev, .cycle-next {position: absolute;top: 50%;margin-top:-20px;}
+		.cycle-prev, .cycle-next {
+			position: absolute;top: 50%;margin-top:-20px;
+			&.disabled {-webkit-opacity: .4;-moz-opacity: .4;-ms-opacity: .4;-o-opacity: .4;opacity: .4;filter:alpha(opacity=40);}
+		}
 		.cycle-prev {left:-38px;}
 		.cycle-next {right:-38px;}
 	}
@@ -196,6 +228,14 @@ JQUERY UI END
 */
 @media print {
 
+}
+@media (max-width: 961px) {
+	.box-banner {
+		.cycle-nav {
+			.cycle-prev {left:10px;}
+			.cycle-next {right:10px;}
+		}
+	}
 }
 @media (max-width: 767px) {
 	/*    .site-geral:before {content:"TABLET";}*/
